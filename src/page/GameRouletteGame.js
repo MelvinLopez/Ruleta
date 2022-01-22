@@ -3,7 +3,7 @@ import { Form, Input, message, Button } from 'antd';
 import styled from 'styled-components';
 import { Wheel } from 'react-custom-roulette';
 
-export default () => {
+const Index = () => {
 	const [data, setData] = useState([]);
 	const [mustSpin, setMustSpin] = useState(false);
 	const [BotonOpt, setBotonOpt] = useState(false);
@@ -14,7 +14,7 @@ export default () => {
 	const [UrlAudioGanador, setUrlAudioGanador] = useState("https://firebasestorage.googleapis.com/v0/b/ruleta-b10b2.appspot.com/o/bites-ta-da-winner.mp3?alt=media&token=5ca06e54-dc15-42bb-9685-65a35a02504b");
 	const [UrlAudioEliminar, setUrlAudioEliminar] = useState("https://firebasestorage.googleapis.com/v0/b/ruleta-b10b2.appspot.com/o/eliimnar.mp3?alt=media&token=c437856e-f950-4e7d-ba50-aa28dee178bc");
 	const [UrlAudioError, setUrlAudioError] = useState("https://firebasestorage.googleapis.com/v0/b/ruleta-b10b2.appspot.com/o/error.mp3?alt=media&token=fc601049-db3e-4ead-a3e1-6960bd26c6cf");
-
+	
 	const audio = new Audio(UrlAudio);
 	const audioGanador = new Audio(UrlAudioGanador);
 	const audioEliminar = new Audio(UrlAudioEliminar);
@@ -172,7 +172,6 @@ export default () => {
 	)
 };
 
-
 const ButtonStyledSpin = styled(Button)`
     text-decoration: none;
     padding: 10px 25px 10px 25px;
@@ -228,28 +227,4 @@ const ButtonStyledOption = styled.div`
     height: auto !important;
 `;
 
-	
-// 	export default Music;
-
-// import React, { useState, useEffect } from 'react';
-
-// const Music = () => {
-// 	const [Play, setPlay] = useState(true);
-// 	const [UrlAudio, setUrlAudio] = useState("https://firebasestorage.googleapis.com/v0/b/ruleta-b10b2.appspot.com/o/ruleta.mp3?alt=media&token=d6efbf16-3af5-4259-a1f1-ab3af1691bac");
-
-// 	const audio = new Audio(UrlAudio);
-
-// 	const togglePlay = () => {
-// 		console.log(audio);
-// 		Play ? audio.play() : audio.pause();
-// 		setPlay(!Play);
-// 	}
-
-// 	return(
-// 		<div>
-// 			<button onClick={() => togglePlay()}>{Play ? "Play" : "pause"}</button>
-// 		</div>
-// 	)
-// }
-
-// export default Music;
+export default Index;
